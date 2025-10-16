@@ -46,5 +46,5 @@ Your mission is to survive for as long as possible by shooting down the descendi
 
 ## Prerequisites
 
-**Python 3.x**
-**Pygame** library
+**Python 3.x**.
+**Pygame** library.
