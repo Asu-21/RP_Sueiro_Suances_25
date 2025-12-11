@@ -1,0 +1,13 @@
+<launch>
+    <arg name="my_color" default="2" />
+
+    <node pkg="space_invaders_ros" type="game_node.py" name="game_node" output="screen" required="true">
+        <param name="screen_param" type="str" value="phase1" />
+        <param name="user_name" value="Player1" />
+        <param name="change_player_color" value="$(arg my_color)" type="int" />
+    </node>
+
+    <node pkg="space_invaders_ros" type="result_node.py" name="result_node" output="screen" />
+    <node pkg="space_invaders_ros" type="control_node.py" name="control_node" output="screen" launch-prefix="xterm -e" />
+    <node pkg="space_invaders_ros" type="info_user.py" name="info_user" output="screen" launch-prefix="xterm -e" />
+</launch>
